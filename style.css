@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--Dark-Raspberry);
+}
+
+h1,
+h2 {
+  font-family: 'Young Serif', serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 100;
+  font-size: clamp(2.3rem, 3vw, 2.5rem);
+  color: black;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 2vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  padding: 0 1.2rem 0;
+  color: var(--Dark-Raspberry);
+}
+
+li {
+  padding: 0.5rem;
+  padding-left: 1.4rem;
+}
+
+p {
+  color: var(--Dark-Charcoal);
+}
+
+section:not(:first-of-type, :last-of-type) {
+  padding-bottom: 1.8rem;
+}
+
+main {
+  max-width: max-content;
+}
+
+.mobile {
+  padding: 1.8rem;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+.Preparation-details {
+  background-color: hsl(14, 45%, 94%);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+
+  h3 {
+    font-size: large;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+.Ingredients,
+.Instructions,
+.Nutrition {
+  overflow: clip;
+  padding: 1.5rem 0 0;
+  margin-bottom: 0.9rem;
+}
+
+.Ingredients,
+.Instructions,
+.table li {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+.Nutrition {
+  .text {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .table li b {
+    margin-left: 30%;
+  }
+
+  .table li {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+  }
+
+  .table li div {
+    display: inline-block;
+    color: black;
+    width: 20%;
+  }
+
+  .table li:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile {
+    padding: 0;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    background: hsl(14, 45%, 89%);
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  main {
+    background-color: var(--White);
+    padding: 1.8rem;
+    border-radius: 0.8rem;
+    width: 70%;
+  }
+  .table li div {
+    display: inline-block;
+  }
+}
